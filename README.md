@@ -11,6 +11,6 @@ Supported versions:
 
 ## CHANGE LOG
 
-| issue id | jtreg result | y4 jdk version | release |
-|:---------|:-------------|:---------------|:--------|
-|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|Y4-JDK-1.0|❌️|
+| issue id | jtreg test (windows) | jtreg test (linux) | jtreg test (macos) | y4 jdk version | release |
+|:---------|:---------------------|:-------------------|:-------------------|:---------------|:--------|
+|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|Y4-JDK-1.0|❌️|
