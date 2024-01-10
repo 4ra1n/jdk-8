@@ -11,7 +11,7 @@ Supported versions:
 
 ## CHANGE LOG
 
-| issue id | jtreg windows | jtreg linux | jtreg macos | y4 jdk version | release |
+| issue id | jtreg windows | jtreg linux | jtreg macos | actions | release |
 |:---------|:--------------|:------------|:------------|:---------------|:--------|
-|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|Y4-JDK-1.0|❌️|
-|[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|❌️|❌️|❌️|Y4-JDK-1.0|❌️|
+|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7475817976)|❌️|
+|[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|❌️|❌️|❌️|❌️|❌️|
