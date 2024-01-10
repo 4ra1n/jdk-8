@@ -74,7 +74,7 @@ public class BadAttributeValueExpException extends Exception   {
         if (valObj == null) {
             val = null;
         } else if (valObj instanceof String) {
-            val= valObj;
+            val = valObj;
         } else if (System.getSecurityManager() == null
                 || valObj instanceof Long
                 || valObj instanceof Integer
@@ -83,7 +83,9 @@ public class BadAttributeValueExpException extends Exception   {
                 || valObj instanceof Byte
                 || valObj instanceof Short
                 || valObj instanceof Boolean) {
-            val = valObj.toString();
+            // [Y4-00002]
+            // val = valObj.toString();
+            val = System.identityHashCode(valObj) + "@" + valObj.getClass().getName();
         } else { // the serialized object is from a version without JDK-8019292 fix
             val = System.identityHashCode(valObj) + "@" + valObj.getClass().getName();
         }
