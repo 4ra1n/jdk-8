@@ -1,14 +1,16 @@
 # Y4-JDK-8
 
-本项目是基于 `OpenJDK 8u` 的项目，重点从安全角度修复和完善 `Java 8`
+y4-jdk is an openjdk8u branch that is designed with a great emphasis on security features
 
-所有可供下载的 `Release` 版本都由 `Github Actions` 构建，且经过 `jtreg` 回归测试
+All downloadable Release versions are built using Github Actions and have passed jtreg regression tests
 
-支持版本:
-- windows x64 (jdk/jre)
-- linux x64 (jdk/jre)
-- macos x64 (jdk/jre)
+Supported versions:
+- Windows x64 (JDK/JRE)
+- Linux x64 (JDK/JRE)
+- MacOS x64 (JDK/JRE)
 
-## 更新日志
+## CHANGE LOG
 
-### 1.0 (开发中)
+| issue id | jtreg result | y4 jdk version | release |
+|:---------|:-------------|:---------------|:--------|
+|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|Y4-JDK-1.0|❌️|
