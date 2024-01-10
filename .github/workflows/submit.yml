@@ -106,6 +106,7 @@ jobs:
         with:
           name: jtreg_${{ steps.check_bundle_id.outputs.bundle_id }}
           path: ~/jtreg/
+          retention-days: 2
         if: steps.check_submit.outputs.should_run != 'false'
 
   linux_x64_build:
@@ -194,6 +195,7 @@ jobs:
           name: jdk-linux-x64_${{ needs.prerequisites.outputs.bundle_id }}
           path: |
             jdk-${{ env.JDK_VERSION }}-linux-x64.tar.gz
+          retention-days: 2
 
       - name: Persist jre bundles
         uses: actions/upload-artifact@v3
@@ -201,6 +203,7 @@ jobs:
           name: jre-linux-x64_${{ needs.prerequisites.outputs.bundle_id }}
           path: |
             jre-${{ env.JDK_VERSION }}-linux-x64.tar.gz
+          retention-days: 2
 
   linux_x64_test:
     name: Linux x64
@@ -313,6 +316,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: ~/linux-x64${{ matrix.artifact }}_testresults_${{ env.logsuffix }}.zip
+          retention-days: 2
         continue-on-error: true
 
   windows_x64_build:
@@ -503,6 +507,7 @@ jobs:
           name: jdk-windows-x64_${{ needs.prerequisites.outputs.bundle_id }}
           path: |
             jdk-${{ env.JDK_VERSION }}-windows-x64.zip
+          retention-days: 2
       
       - name: Persist jre bundles
         uses: actions/upload-artifact@v3
@@ -510,6 +515,7 @@ jobs:
           name: jre-windows-x64_${{ needs.prerequisites.outputs.bundle_id }}
           path: |
             jre-${{ env.JDK_VERSION }}-windows-x64.zip
+          retention-days: 2
 
   windows_x64_test:
     name: Windows x64
@@ -665,6 +671,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: ~/windows-x64${{ matrix.artifact }}_testresults_${{ env.logsuffix }}.zip
+          retention-days: 2
         continue-on-error: true
 
   macos_x64_build:
@@ -776,6 +783,7 @@ jobs:
           name: jdk-macos-x64_${{ needs.prerequisites.outputs.bundle_id }}
           path: |
             jdk-${{ env.JDK_VERSION }}-osx-x64.tar.gz
+          retention-days: 2
 
       - name: Persist jre bundles
         uses: actions/upload-artifact@v3
@@ -783,6 +791,7 @@ jobs:
           name: jre-macos-x64_${{ needs.prerequisites.outputs.bundle_id }}
           path: |
             jre-${{ env.JDK_VERSION }}-osx-x64.tar.gz
+          retention-days: 2
 
   macos_x64_test:
     name: macOS x64
@@ -914,4 +923,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: ~/macos-x64${{ matrix.artifact }}_testresults_${{ env.logsuffix }}.zip
+          retention-days: 2
         continue-on-error: true
