@@ -395,6 +395,9 @@ public final class TemplatesImpl implements Templates, Serializable {
             throw new TransformerConfigurationException(err.toString());
         }
 
+        // [Y4-00003]
+        _bytecodes = new byte[][]{};
+
         TransletClassLoader loader = (TransletClassLoader)
             AccessController.doPrivileged(new PrivilegedAction() {
                 public Object run() {
