@@ -236,14 +236,14 @@ jobs:
         id: jtreg_restore
         uses: actions/download-artifact@v3
         with:
-          name: transient_jtreg_${{ needs.prerequisites.outputs.bundle_id }}
+          name: jtreg_${{ needs.prerequisites.outputs.bundle_id }}
           path: ~/jtreg/
         continue-on-error: true
 
       - name: Restore jtreg artifact (retry)
         uses: actions/download-artifact@v3
         with:
-          name: transient_jtreg_${{ needs.prerequisites.outputs.bundle_id }}
+          name: jtreg_${{ needs.prerequisites.outputs.bundle_id }}
           path: ~/jtreg/
         if: steps.jtreg_restore.outcome == 'failure'
 
@@ -589,14 +589,14 @@ jobs:
         id: jtreg_restore
         uses: actions/download-artifact@v3
         with:
-          name: transient_jtreg_${{ needs.prerequisites.outputs.bundle_id }}
+          name: jtreg_${{ needs.prerequisites.outputs.bundle_id }}
           path: ~/jtreg/
         continue-on-error: true
 
       - name: Restore jtreg artifact (retry)
         uses: actions/download-artifact@v3
         with:
-          name: transient_jtreg_${{ needs.prerequisites.outputs.bundle_id }}
+          name: jtreg_${{ needs.prerequisites.outputs.bundle_id }}
           path: ~/jtreg/
         if: steps.jtreg_restore.outcome == 'failure'
 
@@ -837,14 +837,14 @@ jobs:
         id: jtreg_restore
         uses: actions/download-artifact@v3
         with:
-          name: transient_jtreg_${{ needs.prerequisites.outputs.bundle_id }}
+          name: jtreg_${{ needs.prerequisites.outputs.bundle_id }}
           path: ~/jtreg/
         continue-on-error: true
 
       - name: Restore jtreg artifact (retry)
         uses: actions/download-artifact@v3
         with:
-          name: transient_jtreg_${{ needs.prerequisites.outputs.bundle_id }}
+          name: jtreg_${{ needs.prerequisites.outputs.bundle_id }}
           path: ~/jtreg/
         if: steps.jtreg_restore.outcome == 'failure'
 
