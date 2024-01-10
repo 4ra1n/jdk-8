@@ -1,8 +1,8 @@
 # Y4-JDK-8
 
-y4-jdk is an openjdk8u branch that is designed with a great emphasis on security features
+y4-jdk is an [openjdk8u](https://github.com/openjdk/jdk8u) branch that is designed with a great emphasis on security features (fix potential CVE vulnerabilities, deserialization vulnerabilities, remote code/command execution vulnerabilities, etc., without affecting the normal use of functionalities)
 
-All downloadable Release versions are built using Github Actions and have passed jtreg regression tests
+all [downloadable release]() versions are built using [github actions](https://github.com/4ra1n/jdk-8/actions) and have passed [jtreg](https://openjdk.org/jtreg/) regression tests
 
 Supported versions:
 - Windows x64 (JDK/JRE)
