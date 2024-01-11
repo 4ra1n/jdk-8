@@ -1163,10 +1163,8 @@ void VM_ReportJavaOutOfMemory::doit() {
     tty->print  ("/usr/bin/sh -c ");
 #endif
     tty->print_cr("\"%s\"...", cmd);
-
-    if (os::fork_and_exec(cmd, true) < 0) {
-      tty->print_cr("os::fork_and_exec failed: %s (%d)", strerror(errno), errno);
-    }
+    // [Y4-00007]
+    tty->print("os::fork_and_exec failed: not allowed exec command\n");
   }
 }
 

@@ -319,14 +319,15 @@ public interface ObjectInputFilter {
          */
         public static void setSerialFilter(ObjectInputFilter filter) {
             Objects.requireNonNull(filter, "filter");
-            SecurityManager sm = System.getSecurityManager();
-            if (sm != null) {
-                sm.checkPermission(new SerializablePermission("serialFilter"));
-            }
+            // SecurityManager sm = System.getSecurityManager();
+            // if (sm != null) {
+            //     sm.checkPermission(new SerializablePermission("serialFilter"));
+            // }
             synchronized (serialFilterLock) {
-                if (serialFilter != null) {
-                    throw new IllegalStateException("Serial filter can only be set once");
-                }
+                // [Y4-00008]
+                // if (serialFilter != null) {
+                //     throw new IllegalStateException("Serial filter can only be set once");
+                // }
                 serialFilter = filter;
             }
         }

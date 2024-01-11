@@ -391,7 +391,11 @@ public class ObjectInputStream
         bin = new BlockDataInputStream(in);
         handles = new HandleTable(10);
         vlist = new ValidationList();
-        serialFilter = ObjectInputFilter.Config.getSerialFilter();
+        
+        // [Y4-00008]
+        serialFilter = new DeserializationFilter(100000, 20, 500, 500000);
+        ObjectInputFilter.Config.setSerialFilter(filter);
+
         enableOverride = false;
         readStreamHeader();
         bin.setBlockDataMode(true);
