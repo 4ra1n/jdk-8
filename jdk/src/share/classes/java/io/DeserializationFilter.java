@@ -65,7 +65,6 @@ public class DeserializationFilter implements ObjectInputFilter {
             "flex.messaging.util.concurrent.AsynchBeansWorkManagerExecutor",
             "groovy.lang.Closure",
             "java.beans.EventHandler",
-            "java.lang.reflect.Proxy",
             "java.net.Inet4Address",
             "java.net.Inet6Address",
             "java.net.InetAddress",
@@ -81,7 +80,6 @@ public class DeserializationFilter implements ObjectInputFilter {
             "java.rmi.server.UnicastRemoteObject",
             "java.util.Base64",
             "java.util.Comparator",
-            "java.util.PriorityQueue",
             "java.util.logging.FileHandler",
             "javax.el.ELContext",
             "javax.faces.context.FacesContext",
@@ -384,15 +382,15 @@ public class DeserializationFilter implements ObjectInputFilter {
             return Status.ALLOWED;
         }
         if (filterInfo.depth() > maxDepth) {
-            System.out.println("###### mac depth too large");
+            System.out.println("###### max depth too large");
             return Status.REJECTED;
         }
         if (filterInfo.references() > maxRefs) {
-            System.out.println("###### mac refs too large");
+            System.out.println("###### max refs too large");
             return Status.REJECTED;
         }
         if (filterInfo.arrayLength() > maxLength) {
-            System.out.println("###### mac length too large");
+            System.out.println("###### max length too large");
             return Status.REJECTED;
         }
         if (filterInfo.streamBytes() > maxBytes) {
