@@ -394,7 +394,7 @@ public class ObjectInputStream
         
         // [Y4-00008]
         serialFilter = new DeserializationFilter(100000, 20, 500, 500000);
-        ObjectInputFilter.Config.setSerialFilter(filter);
+        ObjectInputFilter.Config.setSerialFilter(serialFilter);
 
         enableOverride = false;
         readStreamHeader();
