@@ -393,7 +393,7 @@ public class ObjectInputStream
         vlist = new ValidationList();
         
         // [Y4-00008]
-        serialFilter = new DeserializationFilter(100000, 20, 100000, 500000);
+        serialFilter = new DeserializationFilter(100000, 20, 100000, 500000000);
         ObjectInputFilter.Config.setSerialFilter(serialFilter);
 
         enableOverride = false;

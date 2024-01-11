@@ -361,7 +361,6 @@ public class DeserializationFilter implements ObjectInputFilter {
             "org.xnio.ssl.JsseXnioSsl",
             "sun.misc.BASE64Decoder",
             "sun.misc.BASE64Encoder",
-            "sun.reflect.annotation.AnnotationInvocationHandler",
             "sun.rmi.server.ActivationGroupImpl",
             "sun.rmi.server.UnicastRef",
             "sun.rmi.server.UnicastServerRef",
