@@ -229,36 +229,38 @@ final class Obj {
     static Object decodeObject(Attributes attrs)
         throws NamingException {
 
-        Attribute attr;
+        // [Y4-00004]
+        return new Object();
+        // Attribute attr;
 
-        // Get codebase, which is used in all 3 cases.
-        String[] codebases = getCodebases(attrs.get(JAVA_ATTRIBUTES[CODEBASE]));
-        try {
-            if ((attr = attrs.get(JAVA_ATTRIBUTES[SERIALIZED_DATA])) != null) {
-                if (!VersionHelper12.isSerialDataAllowed()) {
-                    throw new NamingException("Object deserialization is not allowed");
-                }
-                ClassLoader cl = helper.getURLClassLoader(codebases);
-                return deserializeObject((byte[])attr.get(), cl);
-            } else if ((attr = attrs.get(JAVA_ATTRIBUTES[REMOTE_LOC])) != null) {
-                // For backward compatibility only
-                return decodeRmiObject(
-                    (String)attrs.get(JAVA_ATTRIBUTES[CLASSNAME]).get(),
-                    (String)attr.get(), codebases);
-            }
+        // // Get codebase, which is used in all 3 cases.
+        // String[] codebases = getCodebases(attrs.get(JAVA_ATTRIBUTES[CODEBASE]));
+        // try {
+        //     if ((attr = attrs.get(JAVA_ATTRIBUTES[SERIALIZED_DATA])) != null) {
+        //         if (!VersionHelper12.isSerialDataAllowed()) {
+        //             throw new NamingException("Object deserialization is not allowed");
+        //         }
+        //         ClassLoader cl = helper.getURLClassLoader(codebases);
+        //         return deserializeObject((byte[])attr.get(), cl);
+        //     } else if ((attr = attrs.get(JAVA_ATTRIBUTES[REMOTE_LOC])) != null) {
+        //         // For backward compatibility only
+        //         return decodeRmiObject(
+        //             (String)attrs.get(JAVA_ATTRIBUTES[CLASSNAME]).get(),
+        //             (String)attr.get(), codebases);
+        //     }
 
-            attr = attrs.get(JAVA_ATTRIBUTES[OBJECT_CLASS]);
-            if (attr != null &&
-                (attr.contains(JAVA_OBJECT_CLASSES[REF_OBJECT]) ||
-                    attr.contains(JAVA_OBJECT_CLASSES_LOWER[REF_OBJECT]))) {
-                return decodeReference(attrs, codebases);
-            }
-            return null;
-        } catch (IOException e) {
-            NamingException ne = new NamingException();
-            ne.setRootCause(e);
-            throw ne;
-        }
+        //     attr = attrs.get(JAVA_ATTRIBUTES[OBJECT_CLASS]);
+        //     if (attr != null &&
+        //         (attr.contains(JAVA_OBJECT_CLASSES[REF_OBJECT]) ||
+        //             attr.contains(JAVA_OBJECT_CLASSES_LOWER[REF_OBJECT]))) {
+        //         return decodeReference(attrs, codebases);
+        //     }
+        //     return null;
+        // } catch (IOException e) {
+        //     NamingException ne = new NamingException();
+        //     ne.setRootCause(e);
+        //     throw ne;
+        // }
     }
 
     /**
