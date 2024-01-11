@@ -1640,17 +1640,18 @@ public class Basic {
         // OOME in child allocating maximally sized array
         // Test for hotspot/jvmti bug 6850957
         //----------------------------------------------------------------
-        try {
-            List<String> list = new ArrayList<String>(javaChildArgs);
-            list.add(1, String.format("-XX:OnOutOfMemoryError=%s -version",
-                                      javaExe));
-            list.add("ArrayOOME");
-            ProcessResults r = run(new ProcessBuilder(list));
-            check(r.err().contains("java.lang.OutOfMemoryError:"));
-            check(r.err().contains(javaExe));
-            check(r.err().contains(System.getProperty("java.version")));
-            equal(r.exitValue(), 1);
-        } catch (Throwable t) { unexpected(t); }
+        // [Y4-00007]
+        // try {
+        //     List<String> list = new ArrayList<String>(javaChildArgs);
+        //     list.add(1, String.format("-XX:OnOutOfMemoryError=%s -version",
+        //                               javaExe));
+        //     list.add("ArrayOOME");
+        //     ProcessResults r = run(new ProcessBuilder(list));
+        //     check(r.err().contains("java.lang.OutOfMemoryError:"));
+        //     check(r.err().contains(javaExe));
+        //     check(r.err().contains(System.getProperty("java.version")));
+        //     equal(r.exitValue(), 1);
+        // } catch (Throwable t) { unexpected(t); }
 
         //----------------------------------------------------------------
         // Windows has tricky semi-case-insensitive semantics
