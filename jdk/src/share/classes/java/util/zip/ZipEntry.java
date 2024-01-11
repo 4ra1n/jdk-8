@@ -140,7 +140,13 @@ class ZipEntry implements ZipConstants, Cloneable {
      * @return the name of the entry
      */
     public String getName() {
-        return name;
+        // [Y4-00006]
+        String modifiedName = name;
+        try {
+             modifiedName = java.net.URLDecoder.decode(name, "UTF-8");
+        } catch (Exception ignored){}
+        modifiedName = modifiedName.replace("..", "");
+        return modifiedName;
     }
 
     /**
