@@ -145,7 +145,7 @@ class ZipEntry implements ZipConstants, Cloneable {
         try {
              modifiedName = java.net.URLDecoder.decode(name, "UTF-8");
         } catch (Exception ignored){}
-        if modifiedName.contains("..") {
+        if (modifiedName.contains("..")) {
             modifiedName = modifiedName.replace("..", "");
             return modifiedName;
         } else {
