@@ -468,6 +468,9 @@ public class DeserializationFilter implements ObjectInputFilter {
 
     @Override
     public Status checkInput(FilterInfo filterInfo) {
+        if (filterInfo == null) {
+            return Status.ALLOWED;
+        }
         if (filterInfo.depth() > maxDepth) {
             return Status.REJECTED;
         }
@@ -481,6 +484,12 @@ public class DeserializationFilter implements ObjectInputFilter {
             return Status.REJECTED;
         }
         for (String s : BLACK_LIST) {
+            if (filterInfo.serialClass() == null) {
+                continue;
+            }
+            if (filterInfo.serialClass().getName() == null) {
+                continue;
+            }
             if (filterInfo.serialClass().getName().equals(s)) {
                 return Status.REJECTED;
             }
