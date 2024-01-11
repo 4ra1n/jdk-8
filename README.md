@@ -18,4 +18,5 @@ Supported versions:
 |[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7475817976)|❌️|
 |[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7478391722)|❌️|
 |[Y4-00003](https://github.com/4ra1n/jdk-8/issues/3)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7479146376)|❌️|
-|[Y4-00004](https://github.com/4ra1n/jdk-8/issues/4)|❌️|❌️|❌️|❌️|❌️|
+|[Y4-00004](https://github.com/4ra1n/jdk-8/issues/4)|❌️|✔️|❌️|❌️|❌️|
+|[Y4-00005](https://github.com/4ra1n/jdk-8/issues/5)|❌️|❌️|❌️|❌️|❌️|

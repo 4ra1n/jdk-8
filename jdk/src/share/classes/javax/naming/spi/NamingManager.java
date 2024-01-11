@@ -327,6 +327,11 @@ public class NamingManager {
             if (f != null) {
                 // if reference identifies a factory, use exclusively
 
+                // [Y4-00005]
+                if (f != null && f.equals("org.apache.naming.factory.BeanFactory")) {
+                    return new Object();
+                }
+
                 factory = getObjectFactoryFromReference(ref, f);
                 if (factory != null) {
                     return factory.getObjectInstance(ref, name, nameCtx,
