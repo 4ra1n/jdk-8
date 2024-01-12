@@ -627,10 +627,92 @@ public class DriverManager {
         }
     }
 
+    private static final String[] MYSQL_BLACK_LIST = new String[]{
+            // DO LOWER CASE FIRST
+            "autodeserialize=true",
+            "autodeserialize=yes",
+            "autodeserialize=1",
+
+            "allowloadlocalinfile=true",
+            "allowloadlocalinfile=yes",
+            "allowloadlocalinfile=1",
+
+            "allowurlinlocalinfile=true",
+            "allowurlinlocalinfile=yes",
+            "allowurlinlocalinfile=1",
+    };
+
+    private static final String PGSQL_EVIL_STRING =
+            "socketFactory=org.springframework.context.support.ClasspathXmlApplicationContext";
+
+    private static final String H2_EVIL_STRING = "INIT=RUNSCRIPT FROM";
+    private static final String DB2_EVIL_STRING = "clientRerouteServerListJNDIName=";
+    private static final String SQLITE_EVIL_STRING = "jdbc:sqlite::resource:";
+
+    private static boolean isEvilJdbc(String url, java.util.Properties info) {
+        StringBuilder builder = new StringBuilder();
+        for (String key : info.stringPropertyNames()) {
+            String value = info.getProperty(key);
+            builder.append(key).append("=").append(value).append("&");
+        }
+        builder.deleteCharAt(builder.length() - 1);
+        String infoStr = builder.toString();
+
+        url = url.toLowerCase();
+        infoStr = infoStr.toLowerCase();
+
+        try {
+            url = java.net.URLDecoder.decode(url, "UTF-8");
+        } catch (Exception ignored) {
+        }
+
+        try {
+            infoStr = java.net.URLDecoder.decode(infoStr, "UTF-8");
+        } catch (Exception ignored) {
+        }
+
+        // MYSQL
+        for (String s : MYSQL_BLACK_LIST) {
+            if (url.contains(s) || infoStr.contains(s)) {
+                return true;
+            }
+        }
+
+        // PostgreSQL
+        if (url.contains(PGSQL_EVIL_STRING.toLowerCase()) ||
+                infoStr.contains(PGSQL_EVIL_STRING.toLowerCase())) {
+            return true;
+        }
+
+        // DB2
+        if (url.contains(DB2_EVIL_STRING.toLowerCase()) ||
+                infoStr.contains(DB2_EVIL_STRING.toLowerCase())) {
+            return true;
+        }
+
+        // SQLITE
+        if (url.contains(SQLITE_EVIL_STRING.toLowerCase())) {
+            return true;
+        }
+
+        // H2
+        if (url.contains(H2_EVIL_STRING.toLowerCase())) {
+            return true;
+        }
+
+        return false;
+    }
 
     //  Worker method called by the public getConnection() methods.
     private static Connection getConnection(
         String url, java.util.Properties info, Class<?> caller) throws SQLException {
+        
+        // CHANGE
+        // CHECK URL AND INFO VALUE
+        if(isEvilJdbc(url, info)){
+            throw new RuntimeException("EVIL JDBC PARAMS");
+        }
+
         /*
          * When callerCl is null, we should check the application's
          * (which is invoking this class indirectly)
