@@ -24,6 +24,6 @@ Supported versions:
 |[Y4-00007](https://github.com/4ra1n/jdk-8/issues/7)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
 |[Y4-00008](https://github.com/4ra1n/jdk-8/issues/8)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
 |[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
-|[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|❌️|❌️|❌️|❌️|❌️|
-|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|❌️|❌️|❌️|❌️|❌️|
-|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|❌️|❌️|❌️|❌️|❌️|
+|[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|❌️|
+|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|❌️|
+|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|❌️|
