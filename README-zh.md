@@ -23,3 +23,5 @@ y4-jdk是一个专注于安全特性的[openjdk8u](https://github.com/openjdk/jd
 |[Y4-00008](https://github.com/4ra1n/jdk-8/issues/8)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
 |[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
 |[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|❌️|❌️|❌️|❌️|❌️|
+|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|❌️|❌️|❌️|❌️|❌️|
+|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|❌️|❌️|❌️|❌️|❌️|

@@ -26,3 +26,4 @@ Supported versions:
 |[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
 |[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|❌️|❌️|❌️|❌️|❌️|
 |[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|❌️|❌️|❌️|❌️|❌️|
+|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|❌️|❌️|❌️|❌️|❌️|

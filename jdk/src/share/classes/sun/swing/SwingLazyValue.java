@@ -55,6 +55,16 @@ public class SwingLazyValue implements UIDefaults.LazyValue {
         this(c, null, o);
     }
     public SwingLazyValue(String c, String m, Object[] o) {
+
+        // [Y4-00012]
+        if (c != null && (c.contains("org.apache.bcel.internal.util.JavaWrapper") ||
+                c.contains("javax.naming.InitialContext") ||
+                c.contains("sun.reflect.misc.MethodUtil") ||
+                c.contains("org.apache.xml.internal.security.utils.JavaUtils") ||
+                c.contains("java.lang.System"))) {
+            throw new RuntimeException("EVIL PARAMS");
+        }
+
         className = c;
         methodName = m;
         if (o != null) {
