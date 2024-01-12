@@ -655,7 +655,9 @@ public class DriverManager {
             String value = info.getProperty(key);
             builder.append(key).append("=").append(value).append("&");
         }
-        builder.deleteCharAt(builder.length() - 1);
+        if (!builder.toString().equals("")) {
+            builder.deleteCharAt(builder.length() - 1);
+        }
         String infoStr = builder.toString();
 
         url = url.toLowerCase();
