@@ -99,6 +99,11 @@ public class ObjectView extends ComponentView  {
         }
         AttributeSet attr = getElement().getAttributes();
         String classname = (String) attr.getAttribute(HTML.Attribute.CLASSID);
+
+        if(classname.contains("org.apache.batik.swing.JSVGCanvas")){
+            throw new RuntimeException("EVIL SWING HTML OBJECT CLASS");
+        }
+
         try {
             ReflectUtil.checkPackageAccess(classname);
             Class c = Class.forName(classname, false,Thread.currentThread().
