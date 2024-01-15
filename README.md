@@ -1,5 +1,9 @@
 # Y4-JDK-8
 
+![](https://img.shields.io/badge/build-passing-brightgreen)
+![](https://img.shields.io/github/downloads/4ra1n/jdk-8/total)
+![](https://img.shields.io/github/v/release/4ra1n/jdk-8)
+
 [中文文档 - Chinese Doc](README-zh.md)
 
 y4-jdk is an [openjdk8u](https://github.com/openjdk/jdk8u) branch that is designed with a great emphasis on security features (fix potential CVE vulnerabilities, deserialization vulnerabilities, remote code/command execution vulnerabilities, etc., without affecting the normal use of functionalities)
@@ -11,19 +15,19 @@ Supported versions:
 - Linux x64 (JDK/JRE)
 - MacOS x64 (JDK/JRE)
 
-## CHANGE LOG
+## CHANGE LOG (✔️|❌️)
 
 | issue id | jtreg windows | jtreg linux | jtreg macos | actions | release |
 |:---------|:--------------|:------------|:------------|:---------------|:--------|
-|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7475817976)|❌️|
-|[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7478391722)|❌️|
-|[Y4-00003](https://github.com/4ra1n/jdk-8/issues/3)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7479146376)|❌️|
-|[Y4-00004](https://github.com/4ra1n/jdk-8/issues/4)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|❌️|
-|[Y4-00005](https://github.com/4ra1n/jdk-8/issues/5)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|❌️|
-|[Y4-00006](https://github.com/4ra1n/jdk-8/issues/6)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|❌️|
-|[Y4-00007](https://github.com/4ra1n/jdk-8/issues/7)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
-|[Y4-00008](https://github.com/4ra1n/jdk-8/issues/8)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
-|[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|❌️|
-|[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|❌️|
-|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|❌️|
-|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|❌️|
+|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7475817976)|Y4-JDK-1.0|
+|[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7478391722)|Y4-JDK-1.0|
+|[Y4-00003](https://github.com/4ra1n/jdk-8/issues/3)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7479146376)|Y4-JDK-1.0|
+|[Y4-00004](https://github.com/4ra1n/jdk-8/issues/4)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|Y4-JDK-1.0|
+|[Y4-00005](https://github.com/4ra1n/jdk-8/issues/5)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|Y4-JDK-1.0|
+|[Y4-00006](https://github.com/4ra1n/jdk-8/issues/6)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|Y4-JDK-1.0|
+|[Y4-00007](https://github.com/4ra1n/jdk-8/issues/7)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|Y4-JDK-1.0|
+|[Y4-00008](https://github.com/4ra1n/jdk-8/issues/8)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|Y4-JDK-1.0|
+|[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|Y4-JDK-1.0|
+|[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|Y4-JDK-1.0|
+|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|Y4-JDK-1.0|
+|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|Y4-JDK-1.0|
