@@ -13,6 +13,10 @@ y4-jdk是一个专注于安全特性的[openjdk8u](https://github.com/openjdk/jd
 - Linux x64 (JDK/JRE)
 - MacOS x64 (JDK/JRE)
 
+## 发布
+
+- [Y4-JDK-1.0](https://github.com/4ra1n/jdk-8/releases/tag/1.0) 2023/01/16
+
 ## 更新日志 (✔️|❌️)
 
 | issue id | jtreg windows | jtreg linux | jtreg macos | actions | release |

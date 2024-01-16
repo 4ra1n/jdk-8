@@ -15,6 +15,10 @@ Supported versions:
 - Linux x64 (JDK/JRE)
 - MacOS x64 (JDK/JRE)
 
+## RELEASE
+
+- [Y4-JDK-1.0](https://github.com/4ra1n/jdk-8/releases/tag/1.0) 2023/01/16
+
 ## CHANGE LOG (✔️|❌️)
 
 | issue id | jtreg windows | jtreg linux | jtreg macos | actions | release |
