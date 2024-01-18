@@ -19,17 +19,18 @@ y4-jdk是一个专注于安全特性的[openjdk8u](https://github.com/openjdk/jd
 
 ## 更新日志 (✔️|❌️)
 
-| issue id | jtreg windows | jtreg linux | jtreg macos | actions | release |
-|:---------|:--------------|:------------|:------------|:---------------|:--------|
-|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7475817976)|Y4-JDK-1.0|
-|[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7478391722)|Y4-JDK-1.0|
-|[Y4-00003](https://github.com/4ra1n/jdk-8/issues/3)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7479146376)|Y4-JDK-1.0|
-|[Y4-00004](https://github.com/4ra1n/jdk-8/issues/4)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|Y4-JDK-1.0|
-|[Y4-00005](https://github.com/4ra1n/jdk-8/issues/5)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|Y4-JDK-1.0|
-|[Y4-00006](https://github.com/4ra1n/jdk-8/issues/6)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7484742923)|Y4-JDK-1.0|
-|[Y4-00007](https://github.com/4ra1n/jdk-8/issues/7)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|Y4-JDK-1.0|
-|[Y4-00008](https://github.com/4ra1n/jdk-8/issues/8)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|Y4-JDK-1.0|
-|[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7492073707)|Y4-JDK-1.0|
-|[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|Y4-JDK-1.0|
-|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|Y4-JDK-1.0|
-|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|✔️|✔️|✔️|[workflow](https://github.com/4ra1n/jdk-8/actions/runs/7497329842)|Y4-JDK-1.0|
+| issue id | jtreg windows | jtreg linux | jtreg macos | release |
+|:---------|:--------------|:------------|:------------|:--------|
+|[Y4-00001](https://github.com/4ra1n/jdk-8/issues/1)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00002](https://github.com/4ra1n/jdk-8/issues/2)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00003](https://github.com/4ra1n/jdk-8/issues/3)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00004](https://github.com/4ra1n/jdk-8/issues/4)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00005](https://github.com/4ra1n/jdk-8/issues/5)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00006](https://github.com/4ra1n/jdk-8/issues/6)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00007](https://github.com/4ra1n/jdk-8/issues/7)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00008](https://github.com/4ra1n/jdk-8/issues/8)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00009](https://github.com/4ra1n/jdk-8/issues/9)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00010](https://github.com/4ra1n/jdk-8/issues/10)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|✔️|✔️|✔️|Y4-JDK-1.0|
+|[Y4-00013](https://github.com/4ra1n/jdk-8/issues/13)|❌️|❌️|❌️|❌️|
