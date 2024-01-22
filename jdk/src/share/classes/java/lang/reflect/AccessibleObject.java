@@ -134,6 +134,12 @@ public class AccessibleObject implements AnnotatedElement {
     private static void setAccessible0(AccessibleObject obj, boolean flag)
         throws SecurityException
     {
+        if (obj instanceof java.lang.reflect.Field && flag == true) {
+            if (((Field) obj).name.equals("modifiers")) {
+                throw new SecurityException("Cannot make a java.lang.reflect.Field" +
+                            " modifiers accessible");
+            }
+        }
         if (obj instanceof Constructor && flag == true) {
             Constructor<?> c = (Constructor<?>)obj;
             if (c.getDeclaringClass() == Class.class) {
