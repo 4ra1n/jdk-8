@@ -36,3 +36,4 @@ Supported versions:
 |[Y4-00011](https://github.com/4ra1n/jdk-8/issues/11)|✔️|✔️|✔️|Y4-JDK-1.0|
 |[Y4-00012](https://github.com/4ra1n/jdk-8/issues/12)|✔️|✔️|✔️|Y4-JDK-1.0|
 |[Y4-00013](https://github.com/4ra1n/jdk-8/issues/13)|❌️|❌️|❌️|❌️|
+|[Y4-00014](https://github.com/4ra1n/jdk-8/issues/14)|❌️|❌️|❌️|❌️|

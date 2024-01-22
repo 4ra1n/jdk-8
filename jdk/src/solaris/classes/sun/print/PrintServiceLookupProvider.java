@@ -872,70 +872,8 @@ public class PrintServiceLookupProvider extends PrintServiceLookup
     }
 
     static String[] execCmd(final String command) {
-        ArrayList results = null;
-        try {
-            final String[] cmd = new String[3];
-            if (isSysV() || isAIX()) {
-                cmd[0] = "/usr/bin/sh";
-                cmd[1] = "-c";
-                cmd[2] = "env LC_ALL=C " + command;
-            } else {
-                cmd[0] = "/bin/sh";
-                cmd[1] = "-c";
-                cmd[2] = "LC_ALL=C " + command;
-            }
-
-            results = (ArrayList)AccessController.doPrivileged(
-                new PrivilegedExceptionAction() {
-                    public Object run() throws IOException {
-
-                        Process proc;
-                        BufferedReader bufferedReader = null;
-                        File f = Files.createTempFile("prn","xc").toFile();
-                        cmd[2] = cmd[2]+">"+f.getAbsolutePath();
-
-                        proc = Runtime.getRuntime().exec(cmd);
-                        try {
-                            boolean done = false; // in case of interrupt.
-                            while (!done) {
-                                try {
-                                    proc.waitFor();
-                                    done = true;
-                                } catch (InterruptedException e) {
-                                }
-                            }
-
-                            if (proc.exitValue() == 0) {
-                                FileReader reader = new FileReader(f);
-                                bufferedReader = new BufferedReader(reader);
-                                String line;
-                                ArrayList results = new ArrayList();
-                                while ((line = bufferedReader.readLine())
-                                       != null) {
-                                    results.add(line);
-                                }
-                                return results;
-                            }
-                        } finally {
-                            f.delete();
-                            // promptly close all streams.
-                            if (bufferedReader != null) {
-                                bufferedReader.close();
-                            }
-                            proc.getInputStream().close();
-                            proc.getErrorStream().close();
-                            proc.getOutputStream().close();
-                        }
-                        return null;
-                    }
-                });
-        } catch (PrivilegedActionException e) {
-        }
-        if (results == null) {
-            return new String[0];
-        } else {
-            return (String[])results.toArray(new String[results.size()]);
-        }
+        // Y4-00014
+        return new String[0];
     }
 
     private class PrinterChangeListener extends Thread {
